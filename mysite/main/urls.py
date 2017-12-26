@@ -1,8 +1,8 @@
 
 from django.conf.urls import url, include
-from . import views
+from main.views import index
 
 urlpatterns = [
-    url(r'^', views.index, name='index'),
-        url(r'^web/', include('web.urls')),
+    url(r'^$', index, name='index'),
+    url(r'^web/', include('web.urls')),
 ]
